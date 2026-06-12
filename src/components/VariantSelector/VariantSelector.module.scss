@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+
+.selector {
+  margin-bottom: $spacing-lg;
+}
+
+.section {
+  margin-bottom: $spacing-md;
+  
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: $text-dark;
+  }
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.swatch {
+  padding: 5px 12px;
+  border: 1px solid $border-light;
+  background: $white;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: $text-dark;
+  
+  &.active {
+    border-color: $primary;
+    background: $primary;
+    color: white;
+  }
+  
+  &:hover:not(.active) {
+    border-color: $text-muted;
+  }
+}
+
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sizeBtn {
+  min-width: 44px;
+  padding: 6px 12px;
+  border: 1px solid $border-light;
+  background: $white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  color: $text-dark;
+  
+  &.active {
+    border-color: $primary;
+    background: $primary;
+    color: white;
+  }
+  
+  &.soldout {
+    opacity: 0.4;
+    text-decoration: line-through;
+    cursor: not-allowed;
+    background: #f9f9f9;
+  }
+  
+  &.lowstock {
+    border-left: 3px solid $warning;
+  }
+  
+  &:hover:not(.soldout):not(.active) {
+    border-color: $text-muted;
+  }
+}
+
+.lowStockBadge {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  background: $warning;
+  color: black;
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  border-radius: 20px;
+  font-weight: 600;
+  line-height: 1;
+}

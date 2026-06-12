@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: $spacing-md;
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  @media (max-width: $mobile) {
+    gap: $spacing-sm;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.empty {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $text-muted;
+  background: $white;
+  border-radius: 8px;
+}

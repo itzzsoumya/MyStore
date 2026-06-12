@@ -1,0 +1,148 @@
+@use '../styles/variables' as *;
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-lg;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-sm;
+  margin-bottom: $spacing-sm;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: $spacing-lg;
+  align-items: start;
+  
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.gallery {
+  background: $white;
+  border-radius: 8px;
+  padding: $spacing-sm;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.details {
+  background: $white;
+  border-radius: 8px;
+  padding: $spacing-lg;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.brand {
+  font-size: 0.8rem;
+  color: $primary;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-xs;
+  border-bottom: 1px solid $border-light;
+  
+  .current {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $primary;
+  }
+  
+  .old {
+    font-size: 0.85rem;
+    color: $text-muted;
+    text-decoration: line-through;
+  }
+}
+
+.addBtn {
+  width: 100%;
+  background: $primary;
+  color: white;
+  border: none;
+  padding: 10px $spacing-md;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: $spacing-md;
+  cursor: pointer;
+  
+  &:hover:not(.disabled) {
+    background: $primary-dark;
+  }
+  
+  &.disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+  }
+}
+
+.status {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $text-muted;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.favoriteIcon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+  padding: 0;
+  line-height: 1;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.active {
+    color: #ff3e6c;
+  }
+}
+
+.fallback {
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #666;
+  text-align: center;
+}

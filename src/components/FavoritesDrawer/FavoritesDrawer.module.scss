@@ -1,0 +1,117 @@
+@use '../../styles/variables' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1000;
+  
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  max-width: 400px;
+  height: 100%;
+  background: $white;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1001;
+  
+  &.open {
+    right: 0;
+  }
+}
+
+.header {
+  padding: $spacing-md $spacing-lg;
+  border-bottom: 1px solid $border-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.items {
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing-md;
+}
+
+.empty {
+  text-align: center;
+  color: $text-muted;
+  margin-top: $spacing-xl;
+}
+
+.item {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $border-light;
+}
+
+.imageLink {
+  flex-shrink: 0;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details {
+  flex: 1;
+}
+
+.name {
+  font-weight: 500;
+  text-decoration: none;
+  color: $text-dark;
+  display: block;
+  margin-bottom: 4px;
+  
+  &:hover {
+    color: $primary;
+  }
+}
+
+.price {
+  font-weight: 600;
+  color: $primary;
+}
+
+.remove {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: $text-muted;
+  
+  &:hover {
+    color: $error;
+  }
+}

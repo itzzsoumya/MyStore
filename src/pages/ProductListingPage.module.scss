@@ -1,0 +1,49 @@
+@use '../styles/variables' as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.section {
+  margin-bottom: $spacing-lg;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: $spacing-md;
+  color: $text-dark;
+  border-left: 4px solid $primary;
+  padding-left: $spacing-sm;
+}
+
+.status {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $text-muted;
+}
+
+.retryBtn {
+  margin-top: $spacing-md;
+  padding: $spacing-sm $spacing-lg;
+  background: $primary;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  
+  &:hover {
+    background: $primary-dark;
+  }
+}
+
+.searchInfo {
+  background: #e3f2fd;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 8px;
+  margin-bottom: $spacing-lg;
+  font-size: 0.9rem;
+}
