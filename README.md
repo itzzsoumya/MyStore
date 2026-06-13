@@ -28,7 +28,7 @@ live url : https://mystore-jet-eta.vercel.app
 
 ```bash
 git clone https://github.com/itzzsoumya/MyStore.git
-cd MyStore
+cd mystore
 npm install
 npm run dev
 ```
