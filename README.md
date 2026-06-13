@@ -2,6 +2,8 @@
 
 A small but complete e‑commerce frontend built with React, Vite, SCSS, and localStorage.
 
+live url : https://mystore-jet-eta.vercel.app
+
 ## What works
 
 - Product listing grid with quick add to cart
